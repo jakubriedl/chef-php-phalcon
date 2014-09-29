@@ -43,6 +43,7 @@ if node['php-phalcon']['devtools']
         user "root"
         cwd "/usr/share"
         code <<-EOH
+        	rm -rf phalcon-devtools
             git clone https://github.com/phalcon/phalcon-devtools.git
             cd phalcon-devtools
             . ./phalcon.sh
