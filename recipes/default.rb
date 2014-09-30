@@ -44,7 +44,7 @@ if node['php-phalcon']['devtools']
         cwd "/usr/share"
         code <<-EOH
         	rm -rf phalcon-devtools /usr/bin/phalcon
-            git clone https://github.com/phalcon/phalcon-devtools.git
+            git clone https://github.com/bileto/phalcon-devtools.git
             cd phalcon-devtools
             . ./phalcon.sh
 			ln -s /usr/share/phalcon-devtools/phalcon.php /usr/bin/phalcon
