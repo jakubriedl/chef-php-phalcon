@@ -17,6 +17,11 @@ git path do
 	action :sync
 end
 
+directory "#{path}/build" do
+	recursive true
+	action :delete
+end
+
 execute  "phalcon-build" do
 	cwd "#{path}/build"
 	user "root"
