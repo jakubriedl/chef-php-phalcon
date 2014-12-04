@@ -11,15 +11,15 @@ end
 
 path  = "#{Chef::Config['file_cache_path']}/phalcon"
 
+directory path do
+    recursive true
+    action :delete
+end
+
 git path do
 	repository node['php-phalcon']['git_url']
 	reference node['php-phalcon']['git_ref']
 	action :sync
-end
-
-directory "#{path}/build" do
-	recursive true
-	action :delete
 end
 
 execute  "phalcon-build" do
